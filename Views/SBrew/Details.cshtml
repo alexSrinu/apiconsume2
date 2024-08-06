@@ -1,0 +1,37 @@
+﻿@model apiconsume2.Models.SBrew
+
+@{
+    ViewBag.Title = "SBrew Details";
+}
+
+<h2>SBrew Details</h2>
+
+<div>
+    <h3>Project Title (EN): @Model.ProjectTitleEn</h3>
+    <p><strong>Row Number:</strong> @Model.RowNumber</p>
+    <p><strong>ID:</strong> @Model.Id</p>
+    <p><strong>URL Project Title (EN):</strong> @Model.UrlProjectTitleEn</p>
+    <p><strong>Project Info (EN):</strong> @Model.ProjectInfoEn</p>
+    <p><strong>Description (EN):</strong> @Html.Raw(Model.DescEn)</p>
+    <p><strong>Image:</strong> @Model.Image</p>
+    <p><strong>Detail Image:</strong> @Model.DetailImage</p>
+    <p><strong>Created By (EN):</strong> @Model.CreatedByEn</p>
+    <p><strong>Sort Index:</strong> @Model.SortIndex</p>
+    <p><strong>Completed On:</strong> @Model.CompletedOn.ToString("dd-MM-yyyy")</p>
+    <p><strong>Client (EN):</strong> @Model.ClientEn</p>
+    <p><strong>Web Link:</strong> <a href="@Model.WebLink" target="_blank">@Model.WebLink</a></p>
+    <p><strong>Android Link:</strong> <a href="@Model.AndroidLink" target="_blank">@Model.AndroidLink</a></p>
+    <p><strong>iOS Link:</strong> <a href="@Model.iOSLink" target="_blank">@Model.iOSLink</a></p>
+    <p><strong>Category ID:</strong> @Model.CategoryId</p>
+    <p><strong>Is Active:</strong> @Model.IsActive</p>
+    <p><strong>Is Deleted:</strong> @Model.IsDeleted</p>
+    <p><strong>Total Row Count:</strong> @Model.TotalRowCount</p>
+    <p><strong>Technology:</strong> @Model.Technology</p>
+    <p><strong>Technology Names (EN):</strong> @Model.TechnologyNamesEn</p>
+    <p><strong>Technology Images:</strong> @Model.TechnologyImages</p>
+</div>
+
+<p>
+    @Html.ActionLink("Back to List", "Index")
+</p>
+

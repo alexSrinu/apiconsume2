@@ -1,0 +1,35 @@
+﻿@model IEnumerable<apiconsume2.Models.SBrew>
+
+@{
+    ViewBag.Title = "SBrew List";
+}
+
+<h2>SBrew List</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Row Number</th>
+            <th>ID</th>
+            <th>Project Title (EN)</th>
+            <th>Completed On</th>
+            <th>Client (EN)</th>
+            <th>Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var sbrew in Model)
+        {
+            <tr>
+                <td>@sbrew.RowNumber</td>
+                <td>@sbrew.Id</td>
+                <td>@sbrew.ProjectTitleEn</td>
+                <td>@sbrew.CompletedOn.ToString("dd-MM-yyyy")</td>
+                <td>@sbrew.ClientEn</td>
+                <td>
+                    @Html.ActionLink("View Details", "Details", new { id = sbrew.Id })
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
